@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - Call Center CRM App</title>
+    <link rel="icon" href="http://203.193.173.125/buildriseshine/favicon.png" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/wordcloud.js"></script>
+  </head>
+  <body class="sb-nav-fixed" onload="loadWordCloud()">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+      <!-- Navbar Brand-->
+      <a class="navbar-brand ps-3" href="index.html">Call Center</a>
+      <!-- Sidebar Toggle-->
+      <button
+        class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
+        id="sidebarToggle"
+        href="#!"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+          <div class="sb-sidenav-menu">
+            <div class="nav">
+              <a class="nav-link" href="index.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Dashboard
+              </a>
+              <a class="nav-link" href="list.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                Service Requests
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4">
+            <h1 class="mt-4">Dashboard</h1>
+            <ol class="breadcrumb mb-4">
+              <li class="breadcrumb-item active">
+                Data Analytics and Report Visualization
+              </li>
+            </ol>
+
+            <div class="row">
+              <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary text-white mb-4">
+                  <p class="card-body">Service Requests Approved</p>
+                  <h4
+                    class="card-footer d-flex align-items-center justify-content-between"
+                  >
+                    12
+                  </h4>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card bg-warning text-white mb-4">
+                  <p class="card-body">Service Requests Open</p>
+                  <h4
+                    class="card-footer d-flex align-items-center justify-content-between"
+                  >
+                    10
+                  </h4>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card bg-success text-white mb-4">
+                  <p class="card-body">Service Requests Assigned</p>
+                  <h4
+                    class="card-footer d-flex align-items-center justify-content-between"
+                  >
+                    9
+                  </h4>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card bg-danger text-white mb-4">
+                  <p class="card-body">Service Requests Pending</p>
+                  <h4
+                    class="card-footer d-flex align-items-center justify-content-between"
+                  >
+                    20
+                  </h4>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <i class="fas fa-chart-area me-1"></i>
+                    Data Area Graph - Daily Service Requests
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myAreaChart" width="100%" height="40"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <i class="fas fa-chart-bar me-1"></i>
+                    Data Bar Graph - Monthly Service Requests
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myBarChart" width="100%" height="40"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-header">
+                <i class="fas fa-chart-area me-1"></i>
+                Word cloud-Our customers around the world
+              </div>
+              <div class="card-body text-center">
+                <img
+                  src="assets/img/Screenshot from 2024-02-22 10-48-59.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-header">
+                <i class="fas fa-chart-area me-1"></i>
+                Timeline - Service Request Workflow Process
+              </div>
+              <div class="card-body text-center">
+                <img
+                  src="assets/img/Screenshot from 2024-02-21 11-43-03.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+          <div class="container-fluid px-4">
+            <div
+              class="d-flex align-items-center justify-content-between small"
+            >
+              <div class="text-muted">Copyright &copy; Your Website 2023</div>
+              <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/scripts.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Data Lists - Call Center CRM App</title>
+    <link rel="icon" href="http://203.193.173.125/buildriseshine/favicon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/wordcloud.js"></script>
+    <script src="assets/js/lang/lang.en.js"></script>
+  </head>
+  <body class="sb-nav-fixed" onload="loadWordCloud()">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+      <!-- Navbar Brand-->
+      <a class="navbar-brand ps-3" href="index.html">Call Center</a>
+      <!-- Sidebar Toggle-->
+      <button
+        class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
+        id="sidebarToggle"
+        href="#!"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+          <div class="sb-sidenav-menu">
+            <div class="nav">
+              <a class="nav-link" href="index.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Dashboard
+              </a>
+              <a class="nav-link" href="list.html">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                Service Requests
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4">
+            <h1 class="mt-4">Service Requests</h1>
+            <ol class="breadcrumb mb-4">
+              <li class="breadcrumb-item active">Manage Service Requests</li>
+            </ol>
+            <div class="card mb-4">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-10">
+                    <i class="fas fa-table me-1"></i>
+                    <div class="btn pe-none">
+                      Data Lists - Service Requests List
+                    </div>
+                  </div>
+                  <div class="col-2 text-right">
+                    <a
+                      class="text-decoration-none btn btn-outline-info px-4 py-1"
+                      role="button"
+                      href="create.html"
+                      ><i class="fas fa-plus me-1"></i> Create</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <table id="datatablesSimple">
+                  <thead>
+                    <tr>
+                      <th>SR ID</th>
+                      <th>Priority</th>
+                      <th>Problem Summary</th>
+                      <th>Status</th>
+                      <th>Customer</th>
+                      <th>Acc No</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>SR ID</th>
+                      <th>Priority</th>
+                      <th>Problem Summary</th>
+                      <th>Status</th>
+                      <th>Customer</th>
+                      <th>Acc No</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td><a href="view.html">10001</a></td>
+                      <td>Low</td>
+                      <td>Testing MSR 2nd</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10002</a></td>
+                      <td>High</td>
+                      <td>QA testing on 11-9</td>
+                      <td>Open</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10003</a></td>
+                      <td>High</td>
+                      <td>Another test from EBS</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10004</a></td>
+                      <td>High</td>
+                      <td>FUEL INJECTION PUMP STICKS</td>
+                      <td>SHT PART</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10005</a></td>
+                      <td>Medium</td>
+                      <td>Checking SR download from EBS 12/16</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10006</a></td>
+                      <td>High</td>
+                      <td>Test for DDIL Demo on 10/19</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10007</a></td>
+                      <td>Medium</td>
+                      <td>CPU Healthcheck Main Tab Step 8 20191103</td>
+                      <td>EQUIP ACCEPTED</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10008</a></td>
+                      <td>High</td>
+                      <td>Test Maintenance CM SR 10172022</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10009</a></td>
+                      <td>High</td>
+                      <td>Supply type SR</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10010</a></td>
+                      <td>Medium</td>
+                      <td>CR187387</td>
+                      <td>Open</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10011</a></td>
+                      <td>High</td>
+                      <td>RPLC ALL CAB SHOCKS</td>
+                      <td>UNIT RCL</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10012</a></td>
+                      <td>Medium</td>
+                      <td>CR015594 / CR01477 test E-174 call</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10013</a></td>
+                      <td>Medium</td>
+                      <td>CR015594/CR001477 Demo SR</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10014</a></td>
+                      <td>Medium</td>
+                      <td>CPU Healthcheck SECREP Exchange</td>
+                      <td>EQUIP ACCEPTED</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10015</a></td>
+                      <td>Medium</td>
+                      <td>CR002026 Test</td>
+                      <td>Open</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10016</a></td>
+                      <td>High</td>
+                      <td>test Prob Sum 9/7 2nd</td>
+                      <td>Approved</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10017</a></td>
+                      <td>High</td>
+                      <td>M29030 Sridhar Test1</td>
+                      <td>Open</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10018</a></td>
+                      <td>High</td>
+                      <td>test by Sridhar for happy path1</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10019</a></td>
+                      <td>High</td>
+                      <td>NEW SR for qa</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10020</a></td>
+                      <td>High</td>
+                      <td>Maintenance needed for repair.</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10021</a></td>
+                      <td>High</td>
+                      <td>Sorting test</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10022</a></td>
+                      <td>High</td>
+                      <td>SR to check Route</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10023</a></td>
+                      <td>Low</td>
+                      <td>Testing for Op Status Update 11/9</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10024</a></td>
+                      <td>High</td>
+                      <td>Test SR sync from QA</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10025</a></td>
+                      <td>High</td>
+                      <td>asdf</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10026</a></td>
+                      <td>High</td>
+                      <td>summary</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10027</a></td>
+                      <td>High</td>
+                      <td>SR2 with Op Minor Edited</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10028</a></td>
+                      <td>Low</td>
+                      <td>
+                        Testing new SR update from Child level for Op Status.
+                      </td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10029</a></td>
+                      <td>High</td>
+                      <td>Test EBS Service</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10030</a></td>
+                      <td>High</td>
+                      <td>
+                        New SR to check for Op Status update from child to
+                        Parent.
+                      </td>
+                      <td>Working</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10031</a></td>
+                      <td>High</td>
+                      <td>Service type SR</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10032</a></td>
+                      <td>High</td>
+                      <td>New SR for 1/25</td>
+                      <td>Open</td>
+                      <td>Fiserv Tech</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10033</a></td>
+                      <td>Medium</td>
+                      <td>Check for Op status update on Parent level</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10034</a></td>
+                      <td>High</td>
+                      <td>SR for Option #3 with Op Minor</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10035</a></td>
+                      <td>High</td>
+                      <td>New SR for Option 2 with Op Status Minor</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10036</a></td>
+                      <td>High</td>
+                      <td>
+                        New SR to check for OP. Status update from Child level
+                      </td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10037</a></td>
+                      <td>High</td>
+                      <td>SR#7 to check Task Update</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10038</a></td>
+                      <td>High</td>
+                      <td>SR#6</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10039</a></td>
+                      <td>High</td>
+                      <td>SR3 Again with OP Minor</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10040</a></td>
+                      <td>High</td>
+                      <td>SR3 with OP Minor</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10041</a></td>
+                      <td>High</td>
+                      <td>SR1 with Op. Minor</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10042</a></td>
+                      <td>High</td>
+                      <td>teswt m</td>
+                      <td>ABD SHIP</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10043</a></td>
+                      <td>Medium</td>
+                      <td>Check for TASK update</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10044</a></td>
+                      <td>High</td>
+                      <td>Op. Deadlined for Maintence type SR</td>
+                      <td>Open</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10045</a></td>
+                      <td>High</td>
+                      <td>Op. minor SR for Maintenance type</td>
+                      <td>Open</td>
+                      <td>Vision Infotech</td>
+                      <td>UIC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10046</a></td>
+                      <td>High</td>
+                      <td>Op. Deadlined SR</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10047</a></td>
+                      <td>High</td>
+                      <td>Op. Minor SR</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10048</a></td>
+                      <td>High</td>
+                      <td>
+                        Maintenance SR to check for Operational status update
+                        from the Task level.
+                      </td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10049</a></td>
+                      <td>High</td>
+                      <td>
+                        10/23 Create SR Operational Minor against instance with
+                        operational no SR status
+                      </td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                    <tr>
+                      <td><a href="view.html">10050</a></td>
+                      <td>High</td>
+                      <td>test SR - Operational Minor status</td>
+                      <td>Open</td>
+                      <td>Attra Pvt. Ltd</td>
+                      <td>AAC-M29030</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+          <div class="container-fluid px-4">
+            <div
+              class="d-flex align-items-center justify-content-between small"
+            >
+              <div class="text-muted">Copyright &copy; Your Website 2023</div>
+              <div>
+                <a href="#">Privacy Policy</a>
+                &middot;
+                <a href="#">Terms &amp; Conditions</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/scripts.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/datatables-simple-demo.js"></script>
+  </body>
+</html>
